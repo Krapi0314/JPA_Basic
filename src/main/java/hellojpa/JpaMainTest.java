@@ -5,9 +5,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class JpaMain {
+public class JpaMainTest {
 
-    public static void main(String[] args) {
+    public static void mainTest(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
 
         EntityManager em = emf.createEntityManager();
@@ -21,8 +21,8 @@ public class JpaMain {
 //            member.setId(1L);
 //            member.setName("helloA");
 //            em.persist(member);
-            Member findMember = em.find(Member.class, 1L);
-            findMember.setName("helloJPA");
+            MemberTest findMemberTest = em.find(MemberTest.class, 1L);
+            findMemberTest.setName("helloJPA");
 
             tx.commit();
         } catch (Exception e) {
